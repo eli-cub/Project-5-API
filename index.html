@@ -22,8 +22,36 @@
       <button id="next-day" type="button" aria-label="Next day">&#8250;</button>
     </nav>
 
+    <h2 class="section-title">Games</h2>
     <p id="message" role="status" aria-live="polite">Loading games...</p>
     <section id="games" class="game-grid" aria-label="NHL games"></section>
+
+    <section class="player-section" aria-labelledby="player-title">
+      <div class="section-heading">
+        <h2 id="player-title" class="section-title">Daily Player Stats</h2>
+        <span class="section-note">Selected date only</span>
+      </div>
+
+      <div class="stat-tabs" aria-label="Player stat categories">
+        <button type="button" class="stat-tab active" data-tab="points" aria-pressed="true">Points</button>
+        <button type="button" class="stat-tab" data-tab="goals" aria-pressed="false">Goal Scorers</button>
+        <button type="button" class="stat-tab" data-tab="goalies" aria-pressed="false">Goalies</button>
+      </div>
+
+      <div class="stats-panel">
+        <div class="stats-panel-heading">
+          <h3 id="stats-title">Point Leaders</h3>
+          <span id="stats-count"></span>
+        </div>
+        <p id="stats-message" role="status" aria-live="polite">Loading player stats...</p>
+        <div class="table-scroll">
+          <table id="stats-table" class="stats-table" hidden>
+            <thead id="stats-head"></thead>
+            <tbody id="stats-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
