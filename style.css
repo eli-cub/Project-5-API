@@ -55,6 +55,11 @@ h1 {
   background: #354a60;
 }
 
+.section-title {
+  font-size: 19px;
+  margin: 0 0 14px;
+}
+
 #message {
   color: #bdc7d1;
   text-align: center;
@@ -65,7 +70,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   gap: 16px;
-  padding-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .game-card {
@@ -104,6 +109,139 @@ h1 {
   font-weight: bold;
 }
 
+/* Daily player statistics */
+.player-section {
+  margin-bottom: 45px;
+}
+
+.section-heading,
+.stats-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-note,
+#stats-count {
+  color: #9eb0c1;
+  font-size: 12px;
+}
+
+.stat-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 2px 0 12px;
+}
+
+.stat-tab {
+  cursor: pointer;
+  background: #1e2936;
+  border: 1px solid #3b4c5f;
+  color: #c4cfda;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.stat-tab.active {
+  background: #344c64;
+  border-color: #829bb2;
+  color: white;
+}
+
+.stat-tab:hover {
+  background: #304358;
+}
+
+.stats-panel {
+  background: #202b38;
+  border: 1px solid #3b4c5f;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.stats-panel-heading {
+  padding: 16px 18px;
+  border-bottom: 1px solid #3b4c5f;
+}
+
+.stats-panel-heading h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+#stats-message {
+  padding: 16px 18px;
+  margin: 0;
+  color: #b9c9d8;
+  font-size: 14px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 14px;
+}
+
+.stats-table th {
+  background: #263443;
+  color: #aebfce;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 11px 15px;
+  border-bottom: 1px solid #354556;
+  white-space: nowrap;
+}
+
+.stats-table th:first-child,
+.stats-table td:first-child {
+  text-align: left;
+  width: 100%;
+}
+
+.stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.stats-table tbody tr:hover {
+  background: #2a394a;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.player-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.player-name {
+  font-weight: bold;
+}
+
+.player-team {
+  display: block;
+  color: #aebfce;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 22px;
@@ -115,5 +253,16 @@ h1 {
 
   .date-nav h2 {
     font-size: 17px;
+  }
+
+  .stat-tab {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .stats-table th,
+  .stats-table td {
+    padding: 10px;
   }
 }
