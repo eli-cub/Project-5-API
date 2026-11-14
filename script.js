@@ -223,6 +223,7 @@ function renderPlayerStats() {
     statsMessage.textContent = `Some game stats are unavailable (${failedGames} game(s)).`;
   } else {
     statsMessage.hidden = true;
+    statsMessage.textContent = "";
   }
 }
 
